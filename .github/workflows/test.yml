@@ -1,0 +1,15 @@
+name: Test Project
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download code
+        uses: actions/checkout@v3
+      - name: Setup NodeJs
+        uses: actions/setup-node@v3
+        with: node-version: 18
+      - name: Install Deps
+        run: num ci
+      - name: Run tests
+        run: npm test
