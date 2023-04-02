@@ -1,5 +1,5 @@
 name: Test Project
-on: workflow_dispatch
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -11,6 +11,6 @@ jobs:
         with:
           node-version: 18
       - name: Install Deps
-        run: num ci
+        run: npm ci
       - name: Run tests
         run: npm test
