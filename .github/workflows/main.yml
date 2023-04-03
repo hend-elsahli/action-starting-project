@@ -1,0 +1,8 @@
+name: Main Workflow
+on: [push, workflow_dispatch]
+jobs:
+  Lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint
+        run: npm run lint
