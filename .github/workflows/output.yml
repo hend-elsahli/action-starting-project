@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Log Context
-        run: echo 'Owner: ${{ github.repository_owner }}';
+        run: echo '${{ github.ref }}';
